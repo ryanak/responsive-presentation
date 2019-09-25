@@ -1,0 +1,1 @@
+"# responsive-presentation"  initgit add README.mdgit commit -m "first commit"git remote add origin https://github.com/ryanak/responsive-presentation.gitgit push -u origin master

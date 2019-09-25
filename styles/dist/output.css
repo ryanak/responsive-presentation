@@ -1,0 +1,169 @@
+* {
+  font-family: "Open-Sans", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#main-accordion ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#main-accordion ul .mobile-menu .minus, #main-accordion ul .mobile-menu + .content {
+  display: none;
+}
+#main-accordion ul .mobile-menu.active + .content, #main-accordion ul .mobile-menu.active .minus {
+  display: block;
+}
+#main-accordion ul .mobile-menu.active .plus {
+  display: none;
+}
+#main-accordion .desktop-menu-item {
+  display: none;
+}
+#main-accordion ul .mobile-menu {
+  display: flex;
+  flex-flow: row;
+  padding: 20px;
+  border-bottom: 2px solid #707070;
+}
+#main-accordion ul .mobile-menu:hover {
+  cursor: pointer;
+}
+#main-accordion ul li .outer-div {
+  width: 50%;
+}
+#main-accordion ul li .left {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+#main-accordion ul li .right {
+  text-align: right;
+  font-size: 20px;
+  color: #323232;
+  position: relative;
+}
+#main-accordion ul li .content {
+  padding: 30px 20px;
+  text-align: center;
+  line-height: 18pt;
+}
+#main-accordion ul li .content p {
+  font-weight: 300;
+}
+#main-accordion ul li .percentages {
+  display: flex;
+  flex-flow: row;
+}
+#main-accordion ul li .percentages .entry {
+  width: 33.3%;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+#main-accordion ul li .percentages .entry .percent {
+  font-size: 34.46px;
+}
+#main-accordion ul li .percentages .entry small {
+  font-size: 14.49px;
+}
+#main-accordion ul li .percentages .entry .dash {
+  max-width: 50%;
+  display: block;
+  height: 2px;
+  background-color: #323232;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.minus.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 3px;
+  margin-top: 10px;
+  width: 15px;
+  height: 1px;
+  right: 0;
+  background-color: #323232;
+}
+
+.plus.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 3px;
+  margin-top: 10px;
+  right: 0;
+  background-color: #323232;
+}
+.plus.icon:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  right: 0;
+  background-color: #323232;
+}
+.plus.icon:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 0;
+  background-color: #323232;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+  #main-accordion {
+    padding: 10% 0;
+    max-width: 698px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #main-accordion .clear {
+    clear: both;
+    width: 100%;
+  }
+  #main-accordion ul .mobile-menu {
+    display: none;
+  }
+  #main-accordion .desktop-menu-item {
+    display: inline-flex;
+    flex-direction: column;
+    width: 33%;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #010101;
+    border-right: none;
+    font-weight: bold;
+    max-width: 140px;
+    cursor: pointer;
+    padding: 6px 0px 6px;
+    letter-spacing: 2px;
+  }
+  #main-accordion ul li .percentages {
+    margin: 0 auto;
+    max-width: 416px;
+  }
+  #main-accordion ul li .percentages .entry .dash {
+    max-width: 25%;
+  }
+  #main-accordion .desktop-menu-item.active {
+    background-color: #010101;
+    color: #ffffff;
+  }
+  #main-accordion .desktop-menu-item:nth-child(3) {
+    border-right: 1px solid #010101;
+  }
+  #main-accordion .desktop-menu-item.active.fit ~ ul .content.fit, #main-accordion .desktop-menu-item.active.care ~ ul .content.care, #main-accordion .desktop-menu-item.active.materials ~ ul .content.materials {
+    display: block;
+  }
+  #main-accordion .desktop-menu-item:last-child {
+    border-right: 1px solid #010101;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
